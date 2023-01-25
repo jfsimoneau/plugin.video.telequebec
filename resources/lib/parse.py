@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 # version 3.2.2 - By dualB
 
-import copy
-from . import content
+import sys, copy
+
+if sys.version_info.major >= 3:
+    from . import content
+else:
+    import content
 
 def ListeVideosFiltrees(mediaBundleId, filtres):
     liste = content.getListeOfVideo(mediaBundleId, filtres)
